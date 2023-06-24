@@ -1,0 +1,145 @@
+body{
+	color:#000;
+	background-color: #c8c8c8;
+	font-size: 17px;
+	 margin:0;
+	padding:0;
+	height:100%;
+	position: relative;
+
+}
+#container{
+	width: 1300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#content{
+	width: 1300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+
+}
+h1,h2{color: #000
+}
+#menu
+{
+	background-color: #c8c8c8;
+	margin-top: 20px;
+	color: #ffffff;
+
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	letter-spacing: 1.5px;
+
+}
+.option
+{
+	float: left;
+	min-width: 50px;
+	height: 25px;
+	font-size: 18px;
+	padding: 20px;
+	border: 1px solid #444444;
+	opacity: 0.8;
+	font-weight: bold;
+	background-color: #fff;
+
+
+}
+
+.option:hover
+{
+	background-color: #00ff00 ;
+	cursor: pointer;
+	color:#fff;
+
+}
+.linkmenu {
+	color: #082567;
+	text-decoration: none;
+	text-align: center;
+}
+.linkmenu :hover {
+	color:#fff;
+}
+#footer
+{background: #444444;
+color:#fff;
+text-align: center;
+padding: 10px 0;
+width: 100%;
+  bottom: 0;
+	position: fixed;
+
+}
+table{
+	width: 100%;
+	padding: 0 10px;
+}
+td{
+	width: 50%;
+	text-align: center;
+	background-color: #082567;
+	color: #ffffff;
+}
+th{
+	color:#ffffff;
+	background: #00ff00;
+}
+#content > div > div.lewy > button, #content > div > div.prawy > button {
+	display: block !important;
+	margin: 0 auto !important;
+	padding: 40px;
+    width: 100%;
+	background: #082567;
+
+}
+#content > div > div.lewy > button:hover, #content > div > div.prawy > button:hover {
+	display: block !important;
+	margin: 0 auto !important;
+	padding: 40px;
+    width: 100%;
+	background:#00ff00 ;
+
+}
+.dottedline a{color: #ffffff;
+	text-decoration: none;
+font-size: 20px;}
+
+
+
+.lewy {
+	width: 50%;
+	float: left;
+}
+
+.prawy{
+	width: 50%;
+	float: right;
+}
+#id_amount{padding: 2px;
+border: 1px solid #082567;
+}
+.btn-primary,input[type=submit]{background:#082567 ;
+color: #ffffff;
+padding: 10px;
+border-radius: 10px; }
+
+.btn-primary:hover, input[type=submit]:hover {
+	background: lime;
+
+}
+.przycisk{
+	width: 20%;
+padding: 10px;
+	background: #082567;
+	border-radius: 10px;
+}
+.przycisk a {color: #ffffff;
+text-decoration: none;
+text-align: center;
+	display: flex;
+	justify-content: center;
+}

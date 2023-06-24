@@ -1,0 +1,26 @@
+
+<head>
+
+    <title>Kategoria wydatków </title>
+</head>
+
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div>
+<h1> Dodaj kategorię wydatków: </h1>
+
+
+<form class="get_name" method="post">
+    	{% csrf_token %}
+    	{{ form }}
+    	<input type="submit" value="Submit">
+
+		</form>
+</div>
+     <div class="przycisk">
+    <a href="/wydatki"> Przejdź do wydatków: </a>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+<head>
+    <title>Wydatki</title>
+</head>
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Wprowadź swój wydatek:</h1>
+    <form method='POST'>{% csrf_token %}
+        {{ form.as_p }}
+    <input type="submit" value="Save">
+    </form>
+    <div class="przycisk">
+    <a href="/name"> Utwórz kategorię wydatków: </a>
+    </div>
+{% endblock %}

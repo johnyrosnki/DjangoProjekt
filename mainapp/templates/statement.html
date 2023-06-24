@@ -1,0 +1,54 @@
+<head>
+    <title>Zestawienie budżetu</title>
+</head>
+{% extends 'base.html' %}
+{# yonetim/templates/list.html #}
+{% load render_table from django_tables2 %}
+{% load static %}
+
+{% block content %}
+<h1>Podsumowanie: </h1>
+
+<p class="zestaw">Dostępne pieniądze w budżecie domowym: <span style="color:red">{{subtract}}</span></p>
+<p class="zestaw">Suma twoich przychodów wynosi: <span style="color:red">{{sum_of_incomes}}</p>
+<p class="zestaw">Wydałeś do tej pory: <span style="color:red">{{sum_of_expenses}}</p>
+</br>
+<div class="lewy">
+<h2>Twoje przychody: </h2>
+<form method="get">
+    {{myFilter.form}}
+    <button class="btn btn-primary" type="submit">Wyszukaj</button>
+</form>
+<table>
+    <tr>
+        <th>Kwota</th>
+        <th>Kategoria</th>
+    </tr>
+{% for incs in inc %}
+    <tr>
+        <td>{{incs.amount}}</td>
+        <td>{{incs.income_category}}</td>
+    </tr>
+{% endfor %}
+</table>
+</div>
+    <div class="prawy">
+<h2>Twoje wydatki: </h2>
+<form method="get">
+    {{newFilter.form}}
+    <button class="btn btn-primary" type="submit">Wyszukaj</button>
+</form>
+<table>
+    <tr>
+        <th>Kwota</th>
+        <th>Kategoria</th>
+    </tr>
+{% for exps in exp %}
+    <tr>
+        <td>{{exps.amount}}</td>
+        <td>{{exps.expense_category}}</td>
+    </tr>
+{% endfor %}
+</table>
+    </div>
+{% endblock %}

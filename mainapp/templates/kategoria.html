@@ -1,0 +1,19 @@
+
+<head>
+    <title>Kategoria przychodów</title>
+</head>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <h1> Podaj kategorię przychodu:</h1>
+<div>
+<form class="get_name" method="post">
+    	{% csrf_token %}
+    	{{ form }}
+    	<input type="submit" value="Submit">
+		</form>
+</div>
+    <div class="przycisk">
+    <a href="/przychody"> Przejdź do przychodów: </a>
+    </div>
+{% endblock %}
